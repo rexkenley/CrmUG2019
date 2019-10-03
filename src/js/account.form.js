@@ -3,6 +3,13 @@ import { parsePhoneNumberFromString, ParseError } from "libphonenumber-js";
 
 let isPhoneValid = true;
 
+export function formOnLoad(executionContext) {
+  const formContext = executionContext.getFormContext(),
+    formType = formContext.ui.getFormType();
+
+  formContext.getControl("WebResource_crmUG").setVisible(formType !== 1);
+}
+
 export async function formOnsave(executionContext) {
   try {
     const saveMode = executionContext.getEventArgs().getSaveMode();
