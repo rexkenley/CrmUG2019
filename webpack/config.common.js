@@ -10,19 +10,25 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: [
-            [
-              "@babel/preset-env",
-              { targets: { chrome: "70", firefox: "63", edge: "17", ie: "11" } }
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  useBuiltIns: "usage",
+                  corejs: 3,
+                  targets: { chrome: "70", firefox: "63", edge: "17", ie: "11" }
+                }
+              ],
+              "@babel/preset-react"
             ],
-            "@babel/preset-react"
-          ],
-          plugins: [
-            "@babel/plugin-syntax-dynamic-import",
-            "@babel/plugin-transform-runtime"
-          ]
+            plugins: [
+              "@babel/plugin-syntax-dynamic-import",
+              "@babel/plugin-transform-runtime"
+            ]
+          }
         }
       }
     ]
