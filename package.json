@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@babel/runtime": "^7.6.2",
+    "@babel/runtime-corejs3": "^7.6.2",
     "@uifabric/icons": "^7.3.0",
     "core-js": "^3.2.1",
     "cucumber": "^5.1.0",
