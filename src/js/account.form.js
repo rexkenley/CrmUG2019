@@ -1,13 +1,17 @@
 /* global Xrm */
 import { parsePhoneNumberFromString, ParseError } from "libphonenumber-js";
 
+import { FormTypes } from "./crm365";
+
 let isPhoneValid = true;
 
 export function formOnLoad(executionContext) {
   const formContext = executionContext.getFormContext(),
     formType = formContext.ui.getFormType();
 
-  formContext.getControl("WebResource_crmUG").setVisible(formType !== 1);
+  formContext
+    .getControl("WebResource_crmUG")
+    .setVisible(formType !== FormTypes.Create);
 }
 
 export async function formOnsave(executionContext) {
