@@ -17,8 +17,6 @@ module.exports = {
               [
                 "@babel/preset-env",
                 {
-                  useBuiltIns: "usage",
-                  corejs: 3,
                   targets: { chrome: "70", firefox: "63", edge: "17", ie: "11" }
                 }
               ],
@@ -26,7 +24,7 @@ module.exports = {
             ],
             plugins: [
               "@babel/plugin-syntax-dynamic-import",
-              ["@babel/plugin-transform-runtime", { corejs: 3 }]
+              ["@babel/plugin-transform-runtime", { corejs: 3 }] // non global polyfills
             ]
           }
         }
