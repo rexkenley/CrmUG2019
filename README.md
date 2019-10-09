@@ -24,4 +24,4 @@ This project also incorporates the **React PowerApps Framework Component Public 
 ##### crmUGPAC
   1. Open a Visual Studio Command Prompt
   2. Go to crmUGPAC\crmUGPAC_deploy
-  3. msbuild
+  3. msbuild /t:build /restore
