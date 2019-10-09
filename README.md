@@ -2,6 +2,8 @@
 A sample project for **Advance Dynamics 365 CE Customization utilizing modern JS** presentation. 
 This project also incorporates the **React PowerApps Framework Component Public Preview**
 
+[Use of React and Office UI Fabric React in the PowerApps component framework is now available for public preview](https://powerapps.microsoft.com/en-us/blog/use-of-react-and-office-ui-fabric-react-in-the-powerapps-component-framework-is-now-available-for-public-preview/)
+
 ###### Installation
   1. Open a Visual Studio Command Prompt
   2. npm i
