@@ -1,10 +1,11 @@
 # CrmUG2019
-A sample project for "Advance Dynamics 365 CE Customization utilizing modern JS" presentation. 
-This project also incorporates the React PowerApps Framework Component Public Preview
+A sample project for **Advance Dynamics 365 CE Customization utilizing modern JS** presentation. 
+This project also incorporates the **React PowerApps Framework Component Public Preview**
 
 ###### Installation
   1. Open a Visual Studio Command Prompt
   2. npm i
+  3. Install [PowerApps Cli](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/get-powerapps-cli) 
 
 ###### Commands
   - npm run build:< project >:dev - produces a browser debbugable version of the project
@@ -19,3 +20,8 @@ This project also incorporates the React PowerApps Framework Component Public Pr
 ###### Project
   - account - account form js 
   - crmUG - a simple ui that displays a rating scale and table list based on account cases
+
+##### crmUGPAC
+  1. Open a Visual Studio Command Prompt
+  2. Go to crmUGPAC\crmUGPAC_deploy
+  3. msbuild
