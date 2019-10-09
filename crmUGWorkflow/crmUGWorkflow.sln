@@ -1,9 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crmUGWorkflow", "crmUGWorkflow\crmUGWorkflow.csproj", "{34917763-48F2-405E-9D8F-83954E3A756D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crmUGPlugin", "crmUGPlugin\crmUGPlugin.csproj", "{30F724D6-4CBF-45BF-8706-A77F2BEB6EB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{34917763-48F2-405E-9D8F-83954E3A756D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34917763-48F2-405E-9D8F-83954E3A756D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34917763-48F2-405E-9D8F-83954E3A756D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F724D6-4CBF-45BF-8706-A77F2BEB6EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F724D6-4CBF-45BF-8706-A77F2BEB6EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F724D6-4CBF-45BF-8706-A77F2BEB6EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F724D6-4CBF-45BF-8706-A77F2BEB6EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
