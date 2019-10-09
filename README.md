@@ -8,7 +8,7 @@ This project also incorporates the React PowerApps Framework Component Public Pr
 
 ###### Commands
   - npm run build:< project >:dev - produces a browser debbugable version of the project
-  - npm run build:< project> :prd - produces a minified version of the project
+  - npm run build:< project > :prd - produces a minified version of the project
   
   // React PowerApps Component Framework public preview
   - npm run build:pac
