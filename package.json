@@ -63,10 +63,10 @@
     "build:crmUG:dev": "%npm_package_scripts_buildDevChunk% src\\js\\crmUG.js -o dist\\crmUG.js && npx pug src\\pug\\crmUG.pug -o dist",
     "build:crmUG:prd": "%npm_package_scripts_buildPrdChunk% src\\js\\crmUG.js -o dist\\crmUG.js && npx pug src\\pug\\crmUG.pug -o dist",
     "//PAC": "*****************************************************************",
-    "build:pac": "pcf-scripts build",
-    "clean:pac": "pcf-scripts clean",
-    "rebuild:pac": "pcf-scripts rebuild",
-    "start:pac": "pcf-scripts start"
+    "build": "pcf-scripts build",
+    "clean": "pcf-scripts clean",
+    "rebuild": "pcf-scripts rebuild",
+    "start": "pcf-scripts start"
   },
   "keywords": [],
   "author": "Rex Kenley Tan",
