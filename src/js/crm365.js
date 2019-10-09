@@ -1,3 +1,6 @@
+/**
+ * @const {object}
+ */
 // eslint-disable-next-line
 export const FormTypes = {
   Undefined: 0,

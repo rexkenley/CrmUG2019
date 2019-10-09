@@ -3,8 +3,14 @@ import { parsePhoneNumberFromString, ParseError } from "libphonenumber-js";
 
 import { FormTypes } from "./crm365";
 
+/**
+ * @type {boolean}
+ */
 let isPhoneValid = true;
 
+/**
+ * @param {object} executionContext
+ */
 export function formOnLoad(executionContext) {
   const formContext = executionContext.getFormContext(),
     formType = formContext.ui.getFormType();
@@ -14,6 +20,9 @@ export function formOnLoad(executionContext) {
     .setVisible(formType !== FormTypes.Create);
 }
 
+/**
+ * @param {object} executionContext
+ */
 export async function formOnsave(executionContext) {
   try {
     const saveMode = executionContext.getEventArgs().getSaveMode();
@@ -45,12 +54,13 @@ export async function formOnsave(executionContext) {
       isPhoneValid = true;
     }
   } catch (ex) {
-    if (ex instanceof ParseError) {
-      console && console.error(ex.message);
-    }
+    console && console.error(ex.message || ex);
   }
 }
 
+/**
+ * @param {object} executionContext
+ */
 export function telephone1OnChange(executionContext) {
   try {
     const formContext = executionContext && executionContext.getFormContext(),
@@ -76,8 +86,6 @@ export function telephone1OnChange(executionContext) {
         : result.formatInternational()
     );
   } catch (ex) {
-    if (ex instanceof ParseError) {
-      console && console.error(ex.message);
-    }
+    console && console.error(ex.message || ex);
   }
 }
