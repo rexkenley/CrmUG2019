@@ -12,10 +12,10 @@ This project also incorporates the **React PowerApps Framework Component Public 
   - npm run build:< project > :prd - produces a minified version of the project
   
   // React PowerApps Component Framework public preview
-  - npm run build:pac
-  - npm run clean:pac
-  - npm run rebuild:pac
-  - npm run start:pac - opens the project in a test browser
+  - npm run build
+  - npm run clean
+  - npm run rebuild
+  - npm run start - opens the project in a test browser
 
 ###### Project
   - account - account form js 
