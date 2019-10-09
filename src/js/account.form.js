@@ -1,5 +1,5 @@
 /* global Xrm */
-import { parsePhoneNumberFromString, ParseError } from "libphonenumber-js";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 import { FormTypes } from "./crm365";
 
