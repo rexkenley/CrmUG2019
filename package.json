@@ -1,8 +1,7 @@
 {
   "name": "crmUG",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A sample project for 'Advance Dynamics 365 CE Customization utilizing modern JS' presentation",
   "dependencies": {
     "@babel/runtime-corejs3": "^7.6.2",
     "@types/node": "^12.7.11",
@@ -64,10 +63,10 @@
     "build:crmUG:dev": "%npm_package_scripts_buildDevChunk% src\\js\\crmUG.js -o dist\\crmUG.js && npx pug src\\pug\\crmUG.pug -o dist",
     "build:crmUG:prd": "%npm_package_scripts_buildPrdChunk% src\\js\\crmUG.js -o dist\\crmUG.js && npx pug src\\pug\\crmUG.pug -o dist",
     "//PAC": "*****************************************************************",
-    "build": "pcf-scripts build",
-    "clean": "pcf-scripts clean",
-    "rebuild": "pcf-scripts rebuild",
-    "start": "pcf-scripts start"
+    "build:pac": "pcf-scripts build",
+    "clean:pac": "pcf-scripts clean",
+    "rebuild:pac": "pcf-scripts rebuild",
+    "start:pac": "pcf-scripts start"
   },
   "keywords": [],
   "author": "Rex Kenley Tan",
