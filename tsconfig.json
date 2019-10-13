@@ -1,7 +1,9 @@
 {
-  "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
   "compilerOptions": {
+    /* PAC */
+    "noImplicitAny": false,
     "typeRoots": ["node_modules/@types"]
   },
-  "compilerOptions": { "noImplicitAny": false }
+  /* PAC */
+  "extends": "./node_modules/pcf-scripts/tsconfig_base.json"
 }
