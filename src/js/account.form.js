@@ -13,11 +13,10 @@ let isPhoneValid = true;
  */
 export function formOnLoad(executionContext) {
   const formContext = executionContext.getFormContext(),
-    formType = formContext.ui.getFormType();
+    formType = formContext.ui.getFormType(),
+    crmUg = formContext.getControl("WebResource_crmUG");
 
-  formContext
-    .getControl("WebResource_crmUG")
-    .setVisible(formType !== FormTypes.Create);
+  crmUg && crmUg.setVisible(formType !== FormTypes.Create);
 }
 
 /**
@@ -39,15 +38,14 @@ export async function formOnsave(executionContext) {
 
     if (!telephone1Value || !address1_countryValue) return;
 
-    const { openAlertDialog } = Xrm.Navigation,
-      result = parsePhoneNumberFromString(
-        telephone1Value,
-        address1_countryValue
-      );
+    const result = parsePhoneNumberFromString(
+      telephone1Value,
+      address1_countryValue
+    );
 
     if (!result || !result.isValid()) {
       executionContext.getEventArgs().preventDefault();
-      await openAlertDialog({ text: "Invalid Phone Number" });
+      await Xrm.Navigation.openAlertDialog({ text: "Invalid Phone Number" });
       formContext.getControl("telephone1").setFocus();
       isPhoneValid = false;
     } else {
