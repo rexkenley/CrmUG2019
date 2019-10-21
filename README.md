@@ -2,7 +2,7 @@
 A sample project for **Advance Dynamics 365 CE Customization utilizing modern JS** presentation. 
 This project also incorporates the **React PowerApps Component Framework Public Preview**
 
-**Thanks to all those who came to my presentation. I am deeply humbled and amazed at the number of people who want to be the "Scotty" on their Enterprise. I plan to add new projects in the future once pcf becomes live.**
+**Thanks to all those who came to my presentation. I am deeply humbled and amazed at the number of people who want to be the "Scotty" on their Enterprise. I plan to add new projects in the future once pcf react becomes live.**
 
 [Use of React and Office UI Fabric React in the PowerApps component framework is now available for public preview](https://powerapps.microsoft.com/en-us/blog/use-of-react-and-office-ui-fabric-react-in-the-powerapps-component-framework-is-now-available-for-public-preview/)
 
