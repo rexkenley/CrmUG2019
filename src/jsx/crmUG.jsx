@@ -20,6 +20,7 @@ import { CommandBar } from "office-ui-fabric-react/lib/CommandBar";
 import { getItems } from "../js/crmUG.store";
 
 const { openForm } = Xrm.Navigation,
+  { getGlobalContext } = Xrm.Utility,
   selection = new Selection(),
   getFarItems = id => {
     const dispatch = useDispatch();
@@ -44,6 +45,31 @@ const { openForm } = Xrm.Navigation,
         iconProps: { iconName: "Refresh" },
         onClick: () => {
           dispatch(getItems());
+        }
+      },
+      {
+        key: "testOData",
+        name: "Test OData",
+        iconProps: { iconName: "TestBeakerSolid" },
+        onClick: async () => {
+          const { getClientUrl } = getGlobalContext(),
+            headers = {
+              "OData-MaxVersion": "4.0",
+              "OData-Version": "4.0",
+              Accept: "application/json",
+              "Content-Type": "application/json; charset=utf-8",
+              Prefer: `odata.include-annotations="*"`
+            },
+            data = await fetch(
+              `${getClientUrl()}/api/data/v9.1/accounts?$select=name&$top=10`,
+              {
+                method: "GET",
+                headers
+              }
+            ),
+            json = data && (await data.json());
+
+          console.log(JSON.stringify(json.value));
         }
       }
     ];
