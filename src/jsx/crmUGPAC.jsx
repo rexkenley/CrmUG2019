@@ -1,6 +1,5 @@
 /* global context */
-import React from "react";
-import get from "lodash/get";
+import React, { useState } from "react";
 import { Provider, useSelector, useDispatch } from "react-redux";
 import { Fabric } from "office-ui-fabric-react/lib/Fabric";
 import { Label } from "office-ui-fabric-react/lib/Label";
@@ -17,11 +16,20 @@ import {
   SelectionMode
 } from "office-ui-fabric-react/lib/DetailsList";
 import { CommandBar } from "office-ui-fabric-react/lib/CommandBar";
+import {
+  Dialog,
+  DialogType,
+  DialogFooter
+} from "office-ui-fabric-react/lib/Dialog";
+import {
+  PrimaryButton,
+  DefaultButton
+} from "office-ui-fabric-react/lib/Button";
 
 import store, { getItems } from "../js/crmUG.store";
 
 const selection = new Selection(),
-  getFarItems = id => {
+  getFarItems = (id, setHidden) => {
     const dispatch = useDispatch(),
       context = useSelector(state => state.context);
 
@@ -46,6 +54,14 @@ const selection = new Selection(),
         onClick: () => {
           dispatch(getItems());
         }
+      },
+      {
+        key: "showDialog",
+        name: "Show Dialog",
+        iconProps: { iconName: "Chat" },
+        onClick: () => {
+          setHidden(false);
+        }
       }
     ];
   },
@@ -55,10 +71,37 @@ const selection = new Selection(),
       maxRating = useSelector(state => state.maxRating),
       columns = useSelector(state => state.columns),
       items = useSelector(state => state.items),
-      accountId = useSelector(state => state.accountId);
+      accountId = useSelector(state => state.accountId),
+      [hidden, setHidden] = useState(true);
 
     return (
       <Fabric>
+        <Dialog
+          hidden={hidden}
+          onDismiss={() => {
+            setHidden(true);
+          }}
+          dialogContentProps={{
+            type: DialogType.normal,
+            title: "Modal Dialog in Center Screen",
+            subText: "I am FREE from the TYRANNY of FRAMES!!!"
+          }}
+          modalProps={{
+            titleAriaId: "titleAriaId",
+            subtitleAriaId: "subtitleAriaId",
+            isBlocking: false,
+            styles: { main: { maxWidth: 450 } }
+          }}
+        >
+          <DialogFooter>
+            <PrimaryButton
+              onClick={() => {
+                setHidden(true);
+              }}
+              text="Close"
+            />
+          </DialogFooter>
+        </Dialog>
         <div style={{ display: "flex" }}>
           <Label>PAC Rating: </Label>
           <Rating
@@ -93,7 +136,7 @@ const selection = new Selection(),
             }}
           />
         </ScrollablePane>
-        <CommandBar farItems={getFarItems(accountId)} />
+        <CommandBar farItems={getFarItems(accountId, setHidden)} />
       </Fabric>
     );
   };
