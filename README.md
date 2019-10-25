@@ -31,4 +31,4 @@ This project also incorporates the **React PowerApps Component Framework Public 
   3. msbuild /t:build /restore
 
 #### PCF ie11 support
-You need to modify the node_modules\pcf-scripts\webpackConfig.js rule for js/jsx to be the same as rule found in package.json.
+You need to modify the node_modules\pcf-scripts\webpackConfig.js rule for js/jsx to be the same as the rule found in package.json.
