@@ -1,6 +1,6 @@
-const dev = require("./config.dev.js"),
+const webpack = require("webpack"),
   merge = require("webpack-merge"),
-  webpack = require("webpack");
+  dev = require("./config.dev.js");
 
 module.exports = merge(dev, {
   plugins: [new webpack.HashedModuleIdsPlugin()],

@@ -1,6 +1,6 @@
-const prd = require("./config.prd.js"),
+const webpack = require("webpack"),
   merge = require("webpack-merge"),
-  webpack = require("webpack");
+  prd = require("./config.prd.js");
 
 module.exports = merge(prd, {
   plugins: [new webpack.HashedModuleIdsPlugin()],

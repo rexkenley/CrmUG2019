@@ -7,6 +7,7 @@
     "@types/node": "^12.7.11",
     "@types/powerapps-component-framework": "^1.2.1",
     "@uifabric/icons": "^7.3.0",
+    "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.2.1",
     "cucumber": "^5.1.0",
     "date-fns": "^2.4.1",
@@ -21,7 +22,10 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "validator": "^11.1.0"
+    "validator": "^11.1.0",
+    "webpack": "^4.41.0",
+    "webpack-bundle-analyzer": "^3.5.2",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -43,10 +47,7 @@
     "pcf-start": "^1.0.6",
     "prettier": "^1.18.2",
     "pug-cli": "^1.0.0-alpha6",
-    "webpack": "^4.41.0",
-    "webpack-bundle-analyzer": "^3.5.2",
-    "webpack-cli": "^3.3.9",
-    "webpack-merge": "^4.2.2"
+    "webpack-cli": "^3.3.9"
   },
   "scripts": {
     "//NPM": "*****************************************************************",

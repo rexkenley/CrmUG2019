@@ -1,5 +1,5 @@
-const prd = require("./config.prd.js"),
-  merge = require("webpack-merge");
+const merge = require("webpack-merge"),
+  prd = require("./config.prd.js");
 
 module.exports = merge(prd, {
   output: {
