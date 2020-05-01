@@ -25,7 +25,8 @@
     "validator": "^11.1.0",
     "webpack": "^4.41.0",
     "webpack-bundle-analyzer": "^3.5.2",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -67,9 +68,12 @@
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
     "rebuild": "pcf-scripts rebuild",
-    "start": "pcf-scripts start"
+    "start": "pcf-scripts start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "Rex Kenley Tan",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
