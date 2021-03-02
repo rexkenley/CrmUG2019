@@ -15,7 +15,7 @@
     "lodash": "^4.17.15",
     "npm-check": "^5.9.0",
     "office-ui-fabric-react": "^7.39.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-redux": "^7.1.1",
